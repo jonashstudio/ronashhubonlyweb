@@ -4,106 +4,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ronash Hub - Key System</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Base styles */
-    * { margin:0; padding:0; box-sizing:border-box; }
     body {
-      font-family: 'Roboto', sans-serif;
+      font-family: Arial, sans-serif;
       background: linear-gradient(135deg, #1e1e2f, #2e2e4f);
       color: white;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      min-height:100vh;
-      padding:20px;
-      text-align:center;
+      text-align: center;
+      padding: 50px;
     }
-
-    /* Container */
     .container {
-      background: rgba(0,0,0,0.75);
-      padding: 40px 30px;
-      border-radius: 15px;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.6);
-      max-width: 400px;
-      width: 100%;
-      animation: fadeIn 1s ease-out;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 12px;
+      padding: 30px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0px 4px 20px rgba(0,0,0,0.5);
     }
-
-    /* Header */
     h1 {
       color: #ff4444;
-      margin-bottom: 15px;
-      font-size: 2.2rem;
-      text-shadow: 0 0 10px #ff4444;
+      margin-bottom: 10px;
     }
-
-    p {
-      margin-bottom: 20px;
-      font-size: 1rem;
-      color: #ccc;
-    }
-
-    /* Input */
     input {
-      width: 100%;
-      padding: 12px;
+      padding: 10px;
       border-radius: 8px;
       border: none;
-      margin-bottom: 20px;
-      font-size: 1rem;
+      width: 80%;
+      margin: 10px 0;
     }
-
-    /* Button */
     button {
-      width: 100%;
-      padding: 12px;
+      padding: 10px 20px;
       border: none;
       border-radius: 8px;
       background: #ff4444;
       color: white;
       font-weight: bold;
-      font-size: 1rem;
       cursor: pointer;
       transition: 0.3s;
-      box-shadow: 0 4px 10px rgba(255,68,68,0.4);
     }
     button:hover {
       background: #ff2222;
-      transform: translateY(-2px);
     }
-
-    /* Status */
-    #status {
-      margin-top: 15px;
-      font-weight: bold;
-    }
-
-    /* Discord link */
     .discord {
-      margin-top: 25px;
+      margin-top: 20px;
     }
-    .discord a {
+    a {
       color: #00aaff;
-      font-weight: bold;
       text-decoration: none;
-      transition: 0.3s;
+      font-weight: bold;
     }
-    .discord a:hover {
+    a:hover {
       text-decoration: underline;
-    }
-
-    /* Animations */
-    @keyframes fadeIn {
-      from { opacity:0; transform: translateY(-20px); }
-      to { opacity:1; transform: translateY(0); }
-    }
-
-    /* Responsive */
-    @media(max-width:500px) {
-      .container { padding: 30px 20px; }
-      h1 { font-size: 1.8rem; }
     }
   </style>
 </head>
@@ -112,6 +62,7 @@
     <h1>Ronash Hub</h1>
     <p>Enter your key below to continue:</p>
     <input type="text" id="keyInput" placeholder="Enter your key">
+    <br>
     <button onclick="checkKey()">Submit</button>
     <p id="status"></p>
     <div class="discord">
