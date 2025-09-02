@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ronash Hub - Key System</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Ronash Hub</h1>
+    <p>Enter your key below to continue:</p>
+    <input type="text" id="keyInput" placeholder="Enter your key">
+    <button onclick="checkKey()">Submit</button>
+    <p id="status"></p>
+    <div class="discord">
+      <p>Need help? Join our Discord:</p>
+      <a href="https://discord.gg/nBMb3dh7" target="_blank">Ronash Hub Discord</a>
+    </div>
+  </div>
+
+  <script>
+    function checkKey() {
+      const input = document.getElementById("keyInput").value;
+      const status = document.getElementById("status");
+      if (input === "Ronashhubontop") {
+        status.style.color = "lime";
+        status.innerText = "✅ Correct Key! Welcome to Ronash Hub!";
+      } else {
+        status.style.color = "red";
+        status.innerText = "❌ Wrong Key! Try again.";
+      }
+    }
+  </script>
+
+</body>
+</html>
